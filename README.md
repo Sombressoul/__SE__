@@ -3,6 +3,12 @@
 
 JavaScript library for exchange events, data and tasks between browser tabs.
 
+Requirements
+======
+1. Blob
+2. Worker
+3. localStorage
+
 API:
 ======
 Options:<br>
