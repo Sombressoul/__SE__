@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Expires" content="Fri, Jan 01 1900 00:00:00 GMT">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Lang" content="en">
+    <title>__SE__ example</title>
+    <script type="text/javascript" src="../src/SE.js"></script>
+</head>
+<body>
+
+<div style="display: table;">
+    <div style="display: table-row;">
+        <div style="display: table-cell;">
+            Active tabs count:
+        </div>
+        <div style="display: table-cell;">
+            <span id="activeTabsCount"></span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+var ActiveTabsCounter = document.getElementById( 'activeTabsCount' );
+    ActiveTabsCounter.innerHTML = __SE__.ActiveTabsCount;
+
+var UpdateTabsCounter = function(){
+    ActiveTabsCounter.innerHTML = __SE__.ActiveTabsCount;
+};
+
+var TabOpenedCallback = function( data ){
+    UpdateTabsCounter();
+};
+
+var TabClosedCallback = function( data ){
+    UpdateTabsCounter();
+};
+
+var TabNameChangedCallback = function( data ){
+    console.dir( data );
+};
+
+__SE__.addEventListener( 'tabOpened'        , TabOpenedCallback );
+__SE__.addEventListener( 'tabClosed'        , TabClosedCallback );
+__SE__.addEventListener( 'tabNameChanged'   , TabNameChangedCallback );
+</script>
+
+
+</body>
+</html>
