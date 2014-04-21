@@ -5,9 +5,10 @@ JavaScript library for exchange events, data and tasks between browser tabs.
 
 Requirements
 ======
-1. Blob
-2. Worker
-3. localStorage
+1. <a href="http://caniuse.com/#search=blob">Blob</a> 
+2. <a href="http://caniuse.com/#feat=bloburls">Blob.URL</a>
+3. <a href="http://caniuse.com/#search=worker">Worker</a>
+4. <a href="http://caniuse.com/#search=localstorage">localStorage</a>
 
 API:
 ======
