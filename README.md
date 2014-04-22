@@ -3,6 +3,8 @@
 
 JavaScript library for exchange events, data and tasks between browser tabs.
 
+Подробный мануал на русском: <a href="http://habrahabr.ru/post/220297/">Хабрахабр</a> - если кто-нибудь переведёт всю эту лабуду на английский, буду очень признателен. :)
+
 Requirements
 ======
 1. <a href="http://caniuse.com/#search=blob">Blob</a> 
